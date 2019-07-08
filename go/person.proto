@@ -1,0 +1,20 @@
+syntax = "proto3";
+package pb;
+
+message person
+{
+    message phone
+    {
+        int64 home = 1;
+        int64 mobile = 2;
+    };
+
+    string name = 1;
+    int32 age = 2;
+    phone contact = 3;
+}
+
+message groups
+{
+    repeated person list = 1;
+}
